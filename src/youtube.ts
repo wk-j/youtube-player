@@ -14,25 +14,33 @@ export class YouTube implements vscode.TextDocumentContentProvider {
 
     createPlayer() {
         return `
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <link href="https://vjs.zencdn.net/7.0.5/video-js.css" rel="stylesheet">
-
-    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-    <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
 </head>
 
 <body>
-    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-        <source src="http://localhost:5000/night.mp4" type='video/mp4'>
-        // <source src="file:///Users/wk/Source/VsCodeYoutubePlayer/night.mp4" type='video/mp4'>
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-    </video>
+    <iframe src="http://localhost:5000/night.mp4"></iframe>
 
+    <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/BHQfBbQBRWM?rel=0&amp;showinfo=0" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+
+    <iframe src="https://www.youtube.com" width="1000" height="500">
+    </iframe>
+
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+        <source src="http://192.168.1.45:5000/night.mp4" type='video/mp4'>
+        <!--
+        <source src="night.mp4" type='video/mp4'>
+         <source src="file:///Users/wk/Source/VsCodeYoutubePlayer/night.mp4" type='video/mp4'>
+         -->
+    </video>
     <script src="https://vjs.zencdn.net/7.0.5/video.js"></script>
 </body>
+</html>
         `
     }
 }
