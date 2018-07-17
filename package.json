@@ -1,6 +1,6 @@
 {
     "name": "vscode-youtube-player",
-    "displayName": "vscode-youtube-player",
+    "displayName": "YouTube Player",
     "description": "",
     "version": "0.0.1",
     "publisher": "wk-j",
@@ -18,7 +18,7 @@
         "commands": [
             {
                 "command": "youTube.showPlayer",
-                "title": "Show Player"
+                "title": "YouTube"
             }
         ]
     },

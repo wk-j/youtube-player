@@ -20,11 +20,12 @@ export class YouTube implements vscode.TextDocumentContentProvider {
 <head> </head>
 
 <body>
-    <iframe src="https://player.vimeo.com/video/277584430" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen
-        allowfullscreen></iframe>
-
-    <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/BHQfBbQBRWM?rel=0&amp;showinfo=0" frameborder="0"
-        allow="autoplay; encrypted-media" allowfullscreen>
+    <iframe
+        width="100%"
+        height="100%"
+        src="http://localhost:9999/vscode.html"
+        frameborder="0"
+        allow="autoplay; encrypted-media" />
     </iframe>
 </body>
 
